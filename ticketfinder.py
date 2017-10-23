@@ -18,6 +18,8 @@ class Event:
         return p[0]
 
 def gen_location(events):
+    "generate a unique random location"
+
     location = (
         random.randint(MIN_POINT, MAX_POINT),
         random.randint(MIN_POINT, MAX_POINT))
@@ -39,6 +41,8 @@ def gen_location(events):
     return location
 
 def gen_events():
+    "generate a list of 100 random events"
+
     events = []
     for i in range(0, 100):
         location = gen_location(events)
