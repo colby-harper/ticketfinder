@@ -3,11 +3,12 @@ import random
 MAX_POINT = 10
 MIN_POINT = -10
 
+
 class Event:
     def __init__(self, id, location):
         self.id = id
         self.location = location
-        self.tickets = random.randint(1,10)
+        self.tickets = random.randint(1, 10)
         self.prices = []
         for x in range(0, self.tickets):
             self.prices.append(round(random.uniform(1, 50), 2))
@@ -16,6 +17,7 @@ class Event:
     def best_price(self):
         p = sorted(self.prices)
         return p[0]
+
 
 def gen_location(events):
     "generate a unique random location"
@@ -40,6 +42,7 @@ def gen_location(events):
 
     return location
 
+
 def gen_events():
     "generate a list of 100 random events"
 
@@ -51,9 +54,11 @@ def gen_events():
 
     return events
 
+
 def manhattan_distance(start, end):
     distance = abs(start[0] - end[0]) + abs(start[1] - end[1])
     return distance
+
 
 if __name__ == "__main__":
     location = input("Please input coordinates: ")
