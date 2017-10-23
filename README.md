@@ -7,3 +7,8 @@ Download the python file `ticketfinder.py`.  Move the downloaded file to whateve
 * There are 100 events
 * Up to 10 tickets per event
 * Events cost up to $50
+
+## Additional comments
+If I needed to support multiple events at the same location, I would simply eliminate the function `generate_location` and determine an event's location during its initialization using the `random` import.
+
+If I needed to work with a larger world size, I might try to optimize the process of finding the 5 closest events.
